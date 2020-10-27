@@ -9,20 +9,51 @@ public class SequenceSum {
         // create array based on size
         int[] sequenceHolderArray = new int[Math.abs(n) + 1];
         System.out.print(n + " --> ");
-        System.out.print("[ ");
-        for (int i = 0; i < sequenceHolderArray.length; i++) {
-            System.out.print(sequenceHolderArray[i] + ", ");
+        int sum = 0;
+        if (n > 0) {
+            System.out.print("[ ");
+            for (int i = 0; i < sequenceHolderArray.length; i++) {
+                sum += i;
+                sequenceHolderArray[i] = sum;
+                if (i == sequenceHolderArray.length - 1) {
+                    System.out.print(sequenceHolderArray[i]);
+                    break;
+                }
+                System.out.print(sequenceHolderArray[i] + ", ");
+            }
+            // System.out.print(" ]");
+            return sequenceHolderArray;
+        } else {
+            System.out.print("[ ");
+            for (int i = 0; i < sequenceHolderArray.length; i++) {
+                sum += i;
+                sequenceHolderArray[i] = -sum;
+                if (i == sequenceHolderArray.length - 1) {
+                    System.out.print(sequenceHolderArray[i]);
+                    break;
+                }
+                System.out.print(sequenceHolderArray[i] + ", ");
+            }
+            System.out.print(" ]");
+            return sequenceHolderArray;
         }
-        System.out.print("]");
-        return sequenceHolderArray;
 
     }
 
     public static void main(String[] args) {
 
-        SequenceSum SequenceTest = new SequenceSum();
+        // Uncomment Code to See Solution in Array form
 
-        SequenceTest.sumOfN(3);
+        SequenceSum SequenceTest = new SequenceSum();
+        // Test Example with "5"
+        // SequenceTest.sumOfN(5)
+
+        // Test Example with "-5"
+        // SequenceTest.sumOfN(-5);
+
+        // Test Example with "-5"
+        SequenceTest.sumOfN(7);
+
     }
 
 }
