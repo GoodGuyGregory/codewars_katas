@@ -19,4 +19,4 @@ function expanded_form(int $n) : string {
 	}
 	
 	return implode(' + ', array_reverse($result));
-  }
+}
