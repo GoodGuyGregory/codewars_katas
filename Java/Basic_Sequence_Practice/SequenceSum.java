@@ -21,8 +21,8 @@ public class SequenceSum {
                 }
                 System.out.print(sequenceHolderArray[i] + ", ");
             }
-            // System.out.print(" ]");
-            return sequenceHolderArray;
+            System.out.print(" ]");
+
         } else {
             System.out.print("[ ");
             for (int i = 0; i < sequenceHolderArray.length; i++) {
@@ -35,8 +35,8 @@ public class SequenceSum {
                 System.out.print(sequenceHolderArray[i] + ", ");
             }
             System.out.print(" ]");
-            return sequenceHolderArray;
         }
+        return sequenceHolderArray;
 
     }
 
