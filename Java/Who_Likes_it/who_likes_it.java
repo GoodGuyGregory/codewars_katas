@@ -6,15 +6,27 @@ package Java.Who_Likes_it;
 public class who_likes_it {
 
     public static String whoLikesIt(String... names) {
+        String likesCollection = "";
+        // there are no likes
         if (names.length == 0) {
             return "no one likes this";
-        } else {
-            String likesCollection = "";
-            for (int i = 0; i < names.length; i++) {
-                likesCollection += names[i] + " likes this";
+        } // there is only ONE like
+        else if (names.length == 1) {
+            for (String person : names) {
+                return person + " likes this";
             }
-            return likesCollection;
+        } // there are only TWO likes
+        else if (names.length == 2) {
+
+            for (int i = 0; i < names.length; i++) {
+                likesCollection += names[i];
+                if (i < 1) {
+                    likesCollection += " and ";
+                }
+            }
+            likesCollection += " likes this";
         }
+        return likesCollection;
     }
 
     public static void main(String[] args) {
