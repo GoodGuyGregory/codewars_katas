@@ -38,6 +38,20 @@ public class who_likes_it {
                 }
             }
             likesCollection += " likes this";
+        } else {
+            for (int i = 0; i < names.length; i++) {
+                likesCollection += names[i];
+                // add comma to the first name found.
+                if (i < 1) {
+                    likesCollection += ", ";
+                }
+                if (i == 1) {
+                    likesCollection += " and ";
+                    likesCollection += names.length - (i + 1) + " others";
+                    break;
+                }
+            }
+            likesCollection += " likes this";
         }
         return likesCollection;
     }
@@ -73,5 +87,8 @@ public class who_likes_it {
         // likes {"Alex", "Jacob", "Mark", "Max"} // must be "Alex, Jacob and 2 others
         // like this"
 
+        String[] likeswithFour = { "Alex", "Jacob", "Mark", "Max" };
+
+        System.out.println(likesTest.whoLikesIt(likeswithFour));
     }
 }
