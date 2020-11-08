@@ -25,6 +25,19 @@ public class who_likes_it {
                 }
             }
             likesCollection += " likes this";
+        } else if (names.length == 3) {
+
+            for (int i = 0; i < names.length; i++) {
+                likesCollection += names[i];
+                // add comma to the first name found.
+                if (i < 1) {
+                    likesCollection += ", ";
+                }
+                if (i == 1) {
+                    likesCollection += " and ";
+                }
+            }
+            likesCollection += " likes this";
         }
         return likesCollection;
     }
@@ -52,6 +65,11 @@ public class who_likes_it {
         System.out.println(likesTest.whoLikesIt(likeswithTwo));
 
         // likes {"Max", "John", "Mark"} // must be "Max, John and Mark like this"
+
+        String[] likeswithThree = { "Max", "John", "Mark" };
+
+        System.out.println(likesTest.whoLikesIt(likeswithThree));
+
         // likes {"Alex", "Jacob", "Mark", "Max"} // must be "Alex, Jacob and 2 others
         // like this"
 
