@@ -8,7 +8,7 @@ bool solution(std::string const &str, std::string const &ending)
 int main()
 {
     // Examples:
-    solution('abc', 'bc') // returns true
+    solution('abc', 'bc'); // returns true
 
-        solution('abc', 'd') // returns false
+    solution('abc', 'd'); // returns false
 }
