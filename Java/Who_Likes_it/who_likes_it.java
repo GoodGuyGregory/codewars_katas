@@ -24,7 +24,7 @@ public class who_likes_it {
                     likesCollection += " and ";
                 }
             }
-            likesCollection += " likes this";
+            likesCollection += " like this";
         } else if (names.length == 3) {
 
             for (int i = 0; i < names.length; i++) {
@@ -37,7 +37,7 @@ public class who_likes_it {
                     likesCollection += " and ";
                 }
             }
-            likesCollection += " likes this";
+            likesCollection += " like this";
         } else {
             for (int i = 0; i < names.length; i++) {
                 likesCollection += names[i];
@@ -51,7 +51,7 @@ public class who_likes_it {
                     break;
                 }
             }
-            likesCollection += " likes this";
+            likesCollection += " like this";
         }
         return likesCollection;
     }
