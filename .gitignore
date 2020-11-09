@@ -2,3 +2,6 @@
 
 # ignores for java:
 *.class
+# ignores for c++
+a.out
+main
