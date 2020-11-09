@@ -1,38 +1,44 @@
 // Kata: https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d/train/cpp
+#include <iostream>
 #include <cstring>
 
-bool solution(std::string const &str, std::string const &ending)
+using namespace std;
+
+// uses standard string header file
+bool containsLetters(std::string const &str, std::string const &ending)
 {
-    // if the string length is larger than a single char
-    if (strlen(ending) == 1)
+    //  see documentation for std:string::npos
+    if (str.find(ending) != std::string::npos)
     {
-        if ()
-        {
-            // found letter in string
-            return true;
-        }
-        else
-            // not found
-            return false;
+        return true;
     }
     else
     {
-
-        if (strstr(str, ending) != NULL))
-            {
-                return true;
-            }
-        else
-        {
-            return false;
-        }
+        return false;
     }
+}
+
+bool solution(std::string const &str, std::string const &ending)
+{
+    if (str.find(ending, (str.length() - ending.length())) != std::string::npos)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 }
 
 int main()
 {
     // Examples:
-    solution('abc', 'bc'); // returns true
+    cout << solution("abcde", "cde") << endl; // returns true
 
-    solution('abc', 'd'); // returns false
+    cout << solution("abcde", "abc") << endl; // returns false
+
+    // Test for ending values of the strings:
+
+    cout << solution("abc", "") << endl; // returns true
 }
