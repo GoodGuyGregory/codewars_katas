@@ -3,10 +3,13 @@
 #include <iostream>
 #include <string>
 #include <regex>
+
 using namespace std;
 
-std::vector<int> solve(std::string s)
+std::vector<int> solveWithREGEX(std::string s)
 {
+    // unsliced Version of incoming string
+    string inputToSlice = s;
     // create vector to store matches
     std::vector<int> matches;
 
@@ -19,8 +22,14 @@ std::vector<int> solve(std::string s)
     // Search string for values
     smatch sm;
 
-    regex_search(s, sm, caps);
-    int uppers = sm.str().size();
+    int uppers = 0;
+    while (regex_search(s, sm, caps))
+    {
+        uppers += sm.str().size();
+        s = sm.suffix().str();
+    };
+    // reassign inputValue
+    s = inputToSlice;
 
     int lowers = 0;
     while (regex_search(s, sm, lower))
@@ -28,16 +37,27 @@ std::vector<int> solve(std::string s)
         lowers += sm.str().size();
         s = sm.suffix().str();
     };
-
+    // reassign inputValue
+    s = inputToSlice;
     // sm.suffix() : returns the remaining string sliced from regex results
 
-    regex_search(s, sm, numbers);
-    int nums = sm.str().size();
+    int nums = 0;
+    while (regex_search(s, sm, numbers))
+    {
+        nums += sm.str().size();
+        s = sm.suffix().str();
+    };
+    s = inputToSlice;
 
-    regex_search(s, sm, spchars);
-    int specials = sm.str().size();
+    int specials = 0;
+    while (regex_search(s, sm, spchars))
+    {
+        specials += sm.str().size();
+        s = sm.suffix().str();
+    };
+    s = inputToSlice;
 
-    // append to vector
+    // append values to vector
     matches.push_back(uppers);
     matches.push_back(lowers);
     matches.push_back(nums);
@@ -45,6 +65,24 @@ std::vector<int> solve(std::string s)
 
     // return the vector
     return matches;
+}
+
+std::vector<int> solve(std::string s)
+{
+    std::vector<int> v = {0, 0, 0, 0};
+    for (char &ch : s)
+    {
+        // using Basic methods from the string class
+        if (isupper(ch))
+            v[0]++;
+        else if (islower(ch))
+            v[1]++;
+        else if (isdigit(ch))
+            v[2]++;
+        else
+            v[3]++;
+    }
+    return v;
 }
 
 int main()
