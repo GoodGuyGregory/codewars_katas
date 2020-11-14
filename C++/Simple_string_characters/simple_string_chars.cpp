@@ -69,10 +69,12 @@ std::vector<int> solveWithREGEX(std::string s)
 
 std::vector<int> solve(std::string s)
 {
+    // create vector
     std::vector<int> v = {0, 0, 0, 0};
+    // assign type and foreach loop
     for (char &ch : s)
     {
-        // using Basic methods from the string class
+        // using basic methods from the string class
         if (isupper(ch))
             v[0]++;
         else if (islower(ch))
