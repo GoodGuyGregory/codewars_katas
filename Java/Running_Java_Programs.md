@@ -8,6 +8,6 @@
 
 * execute your solution
 
-`java <java-solution-name>.java`
+`java <java-solution-name>`
 
-* combine these steps into one command with `javac <java-solution-name.java> && java <java-solution>.java `
+* combine these steps into one command with `javac <java-solution-name.java> && java <java-solution>`
