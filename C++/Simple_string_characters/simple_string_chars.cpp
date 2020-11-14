@@ -22,8 +22,12 @@ std::vector<int> solve(std::string s)
     regex_search(s, sm, caps);
     int uppers = sm.str().size();
 
-    regex_search(s, sm, lower);
-    int lowers = sm.str().size();
+    int lowers = 0;
+    while (regex_search(s, sm, lower))
+    {
+        lowers += sm.str().size();
+        s = sm.suffix().str();
+    };
 
     // sm.suffix() : returns the remaining string sliced from regex results
 
