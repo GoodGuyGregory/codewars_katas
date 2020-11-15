@@ -23,15 +23,25 @@
         <a class="navbar-brand" href="https://github.com/GoodGuyGregory/codewars_katas">CodeWars_Katas</a>
     </nav>
 
-    <div class="container-fluid align-center " style="margin-top: 5rem;">
+    <div class="container-fluid " style="margin-top: 5rem;">
 
         <form>
             <div id="add-box" class="form-group">
-                <h3>Add Kata Languages</h3>
+                <div class="card-header">
+                    <h3>Add Kata Languages</h3>
+                </div>
                 <input type="text" class="form-control-sm " id="languageToAdd" aria-describedby="language">
-                <button type="submit" class="btn btn-info" style="margin: 5px;">Submit</button>
+                <button type="submit" class="btn btn-info" style="margin: 15px;">Submit</button>
             </div>
         </form>
+
+        <div id="add-box" class="container-fluid" style="margin: 20px;">
+            <div class="card-header">
+                <h2>Your Kata Language</h2>
+            </div>
+            <h4 style="margin: 20px;">{{Language}}</h4>
+            <button type="submit" class="btn btn-info" style="margin: 5px;">Close</button>
+        </div>
 
         <div class="container-fluid">
             <div class="card-header">
