@@ -1,0 +1,17 @@
+#cancel-button {
+    background-color: #ff8100;
+    color: #ffff;
+}
+
+
+#add-lang button {
+    margin: 15px;
+}
+
+#random-kata{
+    margin: 20px;
+}
+
+#languages ul {
+    margin-bottom: 15px;
+}
