@@ -59,6 +59,9 @@ $('#randomize').click(function () {
     //     console.log(element);
     // })
 
+
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
     // get random value
     let randomNumber = Math.floor(Math.random() * Math.floor(count));
 
