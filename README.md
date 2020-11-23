@@ -30,7 +30,10 @@ this repo contains [Codewars](https://www.codewars.com/) solutions to various ka
 
 Although this was started as a **Hacktoberfest 2020** project feel free to provide a solution inside of this repo all year round. Practice makes us better developers and programmers.
 
-Happy Coding!
+>If you struggle picking a language to challenge yourself on. Open the [github-pages](https://goodguygregory.github.io/codewars_katas/) application and try a random kata language or add additional languages and select a random kata from the list. I myself try to average around two katas to stay sharp. Thanks for checking this project out.
+>
+ GoodGuyGregory :bike:
+
 
 
 
