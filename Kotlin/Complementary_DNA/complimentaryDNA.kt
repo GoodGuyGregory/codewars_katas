@@ -1,18 +1,18 @@
 // Kata: https://www.codewars.com/kata/554e4a2f232cdd87d9000038/train/kotlin
 
 fun makeComplement(dna: String): String {
+    var correspondingProtein = String()
     // iterate through sequence
     for (proteinBase in dna) {
         // Use When to sequence DNA
         when (proteinBase) {
-            "A" -> "T"
-            "C" -> "G"
-            "G" -> "C"
-            "T" -> "A"
+            'A' -> correspondingProtein += "T"
+            'C' -> correspondingProtein += "G"
+            'G' -> correspondingProtein += "C"
+            'T' -> correspondingProtein += "A"
         }
-        print(proteinBase)
     }
-    return dna
+    return correspondingProtein
 }
 
 fun main() {
