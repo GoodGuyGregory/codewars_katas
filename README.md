@@ -8,6 +8,7 @@
 <p align="center">
 <img src="https://img.shields.io/badge/language-Python-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/language-Javascript-blue?style=for-the-badge">
+ <img src="https://img.shields.io/badge/language-Kotlin-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/language-C++-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/language-Java-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/language-Php-blue?style=for-the-badge">
