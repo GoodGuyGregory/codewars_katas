@@ -1,13 +1,14 @@
 // Kata: https://www.codewars.com/kata/5592e3bd57b64d00f3000047/train/kotlin
-import kotlin.math.*
+import java.lang.Math
 
 object ASum {
 
     fun findNb(m: Long): Long {
         // your code
         var cubes: Long = 0
-        while (m !== 0) {
-            m = cbrt(m)
+        while (m !== 0.toLong()) {
+            // cast to Long for recursive call
+            m: Long = Math.cbrt(m)
             cubes += 1
             findNb(m)
         }
