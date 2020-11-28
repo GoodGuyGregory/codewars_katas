@@ -1,27 +1,25 @@
 // Kata: https://www.codewars.com/kata/5592e3bd57b64d00f3000047/train/kotlin
-import java.lang.Math
-
-object ASum {
-
+object Asum {
     fun findNb(m: Long): Long {
-        // your code
-        var cubes: Long = 0
-        while (m !== 0.toLong()) {
-            // cast to Long for recursive call
-            m: Long = Math.cbrt(m)
+        var volume: Long = 0
+        var cubes: Long = 1
+        while (volume < m) {
+            volume += (cubes * cubes * cubes)
             cubes += 1
-            findNb(m)
         }
-        if 
-
-        return -1
-
-        else 
-            return cubes
+        if (volume == m) {
+                return cubes - 1
+        } else {
+            return -1.toLong()
+        }
     }
 }
 
 // Create object for test methods:
+fun main() {
+    // findNb(1071225) --> 45
+    println(Asum.findNb(1071225))
 
-// findNb(1071225) --> 45
-// findNb(91716553919377) --> -1
+    // findNb(91716553919377) --> -1
+    println(Asum.findNb(91716553919377))
+}
