@@ -6,6 +6,8 @@ public class Line {
         int[][] cashDrawer = new int[3][5];
         for (int payment : peopleInLine) {
             System.out.println("The ticket is $25.00 ");
+            System.out.print("Out of " + payment);
+            System.out.println("");
             if (payment == 25) {
                 for (int i = 0; i < cashDrawer[0].length; i++) {
                     if (cashDrawer[0][i] == 0) {
@@ -96,5 +98,17 @@ public class Line {
         // => NO. Vasya will not have the right bills to give 75 dollars of change (you
         // can't make two bills of 25 from one of 50)
         System.out.println(examples.Tickets(new int[] { 25, 25, 50, 50, 100 }));
+
+        // => YES : case where 3 25s produce change
+        System.out.println(exaxmples.Tickets(new int[] { 25, 25, 25, 100 }));
+
+        // => YES : case where there is just enough for the last customer
+        System.out.println(exaxmples.Tickets(new int[] { 25, 25, 50, 100 }));
+
+        // => NO : case where the first customer pays with a 50
+        System.out.println(exaxmples.Tickets(new int[] { 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 }));
+
+        // => YES :
+        System.out.println(exaxmples.Tickets(new int[] { 25, 25, 25, 25, 50, 100 }));
     }
 }
