@@ -39,6 +39,10 @@ public class Line {
             }
             // Recieve a 100
             if (payment == 100) {
+                // Check for any form of change in register
+                if (cashDrawer[1][0] != 25 && cashDrawer[2][0] != 50) {
+                    return "NO";
+                }
                 System.out.println("Change for $100.00");
                 // Place 100 in the drawer
                 for (int i = 0; i < cashDrawer[2].length; i++) {
@@ -87,6 +91,10 @@ public class Line {
         System.out.println(examples.Tickets(new int[] { 25, 25, 50 }));// => YES
 
         // => NO. Vasya will not have enough money to give change to 100 dollars
-        System.out.println(Line.Tickets(new int[] { 25, 100 }));
+        System.out.println(examples.Tickets(new int[] { 25, 100 }));
+
+        // => NO. Vasya will not have the right bills to give 75 dollars of change (you
+        // can't make two bills of 25 from one of 50)
+        System.out.println(examples.Tickets(new int[] { 25, 25, 50, 50, 100 }));
     }
 }
