@@ -6,8 +6,6 @@ public class Line {
         int[][] cashDrawer = new int[3][5];
         for (int payment : peopleInLine) {
             System.out.println("The ticket is $25.00 ");
-            System.out.print("Out of " + payment);
-            System.out.println("");
             if (payment == 25) {
                 for (int i = 0; i < cashDrawer[0].length; i++) {
                     if (cashDrawer[0][i] == 0) {
@@ -19,7 +17,8 @@ public class Line {
             }
             // Recieve a 50
             if (payment == 50) {
-                System.out.println("Change for $50.00");
+                System.out.println("Out of " + payment);
+
                 // place in cashdrawer
                 for (int i = 0; i < cashDrawer[1].length; i++) {
                     if (cashDrawer[1][i] == 0) {
@@ -28,11 +27,12 @@ public class Line {
                     }
                 }
                 // Give Change from the cashDrawer
-                for (int i = cashDrawer[0].length - 1; 0 < i; i--) {
+                System.out.println("Change for $50.00");
+                for (int i = cashDrawer[0].length - 1; 0 <= i; i--) {
                     if (cashDrawer[0][i] == 25) {
                         cashDrawer[0][i] = 0;
                         break;
-                    } else if (cashDrawer[0][i] == 0 && i == 0) {
+                    } else if (cashDrawer[0][i] == 0 && i == 0 && cashDrawer[0][i] != 25) {
                         return "NO";
                     }
                 }
@@ -41,11 +41,13 @@ public class Line {
             }
             // Recieve a 100
             if (payment == 100) {
+                System.out.println("Out of " + payment);
                 // Check for any form of change in register
-                if (cashDrawer[1][0] != 25 && cashDrawer[2][0] != 50) {
+                if (cashDrawer[0][0] != 25) {
                     return "NO";
+
                 }
-                System.out.println("Change for $100.00");
+
                 // Place 100 in the drawer
                 for (int i = 0; i < cashDrawer[2].length; i++) {
                     if (cashDrawer[2][i] == 0) {
@@ -53,6 +55,23 @@ public class Line {
                         break;
                     }
                 }
+                // check if there are no 50s but enough 25s
+                if (cashDrawer[1][0] != 50 && cashDrawer[0][0] == 25) {
+                    // check to see if there are enough 25s to give change
+                    int count = 0;
+                    while (count != 75) {
+                        for (int i = cashDrawer[0].length - 1; 0 <= i; i--) {
+                            if (cashDrawer[0][i] == 25) {
+                                cashDrawer[0][i] = 0;
+                                count += 25;
+                            } else if (cashDrawer[0][i] == 0 && i == 0 && cashDrawer[0][i] != 25) {
+                                return "NO";
+                            }
+                        }
+                    }
+
+                }
+
                 // Give Change of 75
                 for (int i = cashDrawer[1].length - 1; 0 < i; i--) {
                     if (cashDrawer[1][i] == 50) {
@@ -70,9 +89,11 @@ public class Line {
                         return "NO";
                     }
                 }
+                System.out.println("Change for $100.00");
                 System.out.println("Thank You! Enjoy the show!");
 
             }
+
             // Display cashDrawer Contents
             System.out.println("Cash Drawer: ");
             System.out.println("=======================");
@@ -84,31 +105,32 @@ public class Line {
             }
         }
         return "YES";
+
     }
 
     public static void main(String[] args) {
         // Examples:
         Line examples = new Line();
 
-        System.out.println(examples.Tickets(new int[] { 25, 25, 50 }));// => YES
+        // System.out.println(examples.Tickets(new int[] { 25, 25, 50 }));// => YES
 
         // => NO. Vasya will not have enough money to give change to 100 dollars
-        System.out.println(examples.Tickets(new int[] { 25, 100 }));
+        // System.out.println(examples.Tickets(new int[] { 25, 100 }));
 
         // => NO. Vasya will not have the right bills to give 75 dollars of change (you
         // can't make two bills of 25 from one of 50)
-        System.out.println(examples.Tickets(new int[] { 25, 25, 50, 50, 100 }));
+        // System.out.println(examples.Tickets(new int[] { 25, 25, 50, 50, 100 }));
 
         // => YES : case where 3 25s produce change
-        System.out.println(exaxmples.Tickets(new int[] { 25, 25, 25, 100 }));
+        // System.out.println(examples.Tickets(new int[] { 25, 25, 25, 100 }));
 
         // => YES : case where there is just enough for the last customer
-        System.out.println(exaxmples.Tickets(new int[] { 25, 25, 50, 100 }));
+        // System.out.println(examples.Tickets(new int[] { 25, 25, 50, 100 }));
 
         // => NO : case where the first customer pays with a 50
-        System.out.println(exaxmples.Tickets(new int[] { 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 }));
+        System.out.println(examples.Tickets(new int[] { 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 }));
 
-        // => YES :
-        System.out.println(exaxmples.Tickets(new int[] { 25, 25, 25, 25, 50, 100 }));
+        // => YES
+        System.out.println(examples.Tickets(new int[] { 25, 25, 25, 25, 50, 100 }));
     }
 }
