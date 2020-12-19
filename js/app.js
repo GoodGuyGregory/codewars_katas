@@ -18,13 +18,15 @@ $('#cancel-button').click(function () {
     $('#add-lang').slideUp();
     $('#cancel-button').hide();
     $('#add-button').show();
-})
+});
 
 $('#submit-lang').click(function () {
-    const newKataLang = $('#languageToAdd').val();
+    let newKataLang = $('#languageToAdd').val();
+    console.log(newKataLang);
 
     // append to list
-    $('kata-lang').text(newKataLang);
+    $('#kata-lang').text(newKataLang);
+
 })
 
 // Randomize Action:
