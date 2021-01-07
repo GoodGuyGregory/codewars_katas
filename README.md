@@ -27,13 +27,15 @@
 </p>
 
 
-this repo contains [Codewars](https://www.codewars.com/) solutions to various katas in various programming languages.please join codewars and read the `CONTRIBUTING.md` before opening a pull request.
+this repo contains [Codewars](https://www.codewars.com/) solutions to various katas in various programming languages.please join codewars and read the `CONTRIBUTING.md` before opening a pull request. 
 
 Although this was started as a **Hacktoberfest 2020** project feel free to provide a solution inside of this repo all year round. Practice makes us better developers and programmers.
 
 >If you struggle picking a language to challenge yourself on. Open the [github-pages](https://goodguygregory.github.io/codewars_katas/) application and try a random kata language or add additional languages and select a random kata from the list. I myself try to average around two katas to stay sharp. Thanks for checking this project out.
 >
  GoodGuyGregory :bike:
+ 
+ [Discord](https://discord.gg/Y5h3jvk6)
 
 
 
