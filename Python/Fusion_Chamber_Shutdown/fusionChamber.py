@@ -17,8 +17,8 @@ def burner(c, h, o):
         h -= 2
         o -= 1
         water += 1
-    if (o > 2):
-        while (c > 0 and o > 2):
+    if (o > 2 and c > 0):
+        while (c > 0 and o > 1):
             c -= 1
             o -= 2
             co2 += 1
@@ -44,6 +44,10 @@ def main():
 
     # (C,H,O) = burner(939,3,694) => (1,346,0)
     burner(939, 3, 694)
+
+    #  Trouble cases:
+    # (C,H,O) = burner(50,0,25) => (0,25,0)
+    burner(26, 0, 52)
 
 
 main()
