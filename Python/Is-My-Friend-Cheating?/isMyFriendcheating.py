@@ -9,22 +9,23 @@ def remov_nb(n):
     i = 1
     for i in range(1, n+1):
         summation += i
-        print(summation)
 
     # determine divisors: 1 is implied to work and not be selected:
-    for i in range(2, n):
+    for j in range(2, n):
         #  check if the two values work:
-        for j in range(1, n):
-            if i * j == summation - (i * j):
+        for k in range(1, n):
+            if j * k == summation - (j + k):
                 # append to list:
-                values.append((i, j))
-                values.append((j, i))
-
+                values.append((j, k))
+                break
     return values
 
 
 def main():
     print(remov_nb(26))
+    print(remov_nb(50))
+
+    print(remov_nb(300))
 
 
 main()
