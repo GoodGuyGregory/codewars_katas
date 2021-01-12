@@ -17,15 +17,12 @@ def remov_nb(n):
             if j * k == summation - (j + k):
                 # append to list:
                 values.append((j, k))
-                break
     return values
 
 
 def main():
     print(remov_nb(26))
     print(remov_nb(50))
-
-    print(remov_nb(300))
 
 
 main()
