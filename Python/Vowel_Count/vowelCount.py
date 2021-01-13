@@ -7,8 +7,6 @@ def get_count(input_str):
     for i in input_str:
         if i in vowels:
             num_vowels += 1
-    # your code here
-
     return num_vowels
 
 
