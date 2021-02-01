@@ -1,0 +1,11 @@
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/bin/Debug/netcoreapp3.1/Max_Length_Difference
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/bin/Debug/netcoreapp3.1/Max_Length_Difference.deps.json
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/bin/Debug/netcoreapp3.1/Max_Length_Difference.runtimeconfig.json
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/bin/Debug/netcoreapp3.1/Max_Length_Difference.runtimeconfig.dev.json
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/bin/Debug/netcoreapp3.1/Max_Length_Difference.dll
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/bin/Debug/netcoreapp3.1/Max_Length_Difference.pdb
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/obj/Debug/netcoreapp3.1/Max_Length_Difference.csprojAssemblyReference.cache
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/obj/Debug/netcoreapp3.1/Max_Length_Difference.AssemblyInfoInputs.cache
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/obj/Debug/netcoreapp3.1/Max_Length_Difference.AssemblyInfo.cs
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/obj/Debug/netcoreapp3.1/Max_Length_Difference.dll
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Max_Length_Difference/obj/Debug/netcoreapp3.1/Max_Length_Difference.pdb
