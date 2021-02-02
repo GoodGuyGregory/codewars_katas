@@ -4,10 +4,10 @@
 def delete_nth(order, max_e):
     maxDuplicates = max_e
     removals = []
-    duplicates = 0
     for i in range(len(order)):
         element = order[i]
         remainingElements = order[i+1:len(order)]
+        duplicates = 0
         for j in range(len(remainingElements)):
             if element == remainingElements[j]:
                 duplicates += 1
@@ -29,6 +29,11 @@ def main():
 
     #   delete_nth ([20,37,20,21],1) # return [20,37,21]
     print(delete_nth([20, 37, 20, 21], 1))
+
+    #  additional examples:
+
+    #  delete_nth([1,1,3,3,7,2,2,2,2], 3) # return [1, 1, 3, 3, 7, 2, 2, 2]
+    print(delete_nth([1, 1, 3, 3, 7, 2, 2, 2, 2], 3))
 
 
 main()
