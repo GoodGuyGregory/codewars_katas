@@ -1,0 +1,1 @@
+[Creating a Dictionary Basically an Object](https://www.poftut.com/how-create-and-use-dictionary-in-javascript-tutorial-with-examples/)
