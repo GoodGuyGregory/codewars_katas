@@ -36,7 +36,6 @@ function alphabetWar(fight) {
         return "Left side wins!";
     }
 
-
     return "Let's fight again!";
 }
 

@@ -2,7 +2,6 @@
 
 
 def delete_nth(order, max_e):
-    maxDuplicates = max_e
     removals = []
     for i in range(len(order)):
         duplicates = 0
