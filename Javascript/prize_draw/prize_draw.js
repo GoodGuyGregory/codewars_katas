@@ -11,15 +11,17 @@ function rank(st, we, n) {
         letterValues.set(letters[i], j);
         j++;
     }
+
     st = st.toLowerCase();
+    let names = st.split(",")
+    console.log(names);
     let total = 0;
     for (let char of st) {
-        console.log(char);
         if (letterValues.get(char)) {
             total = total + letterValues.get(char);
         }
+
     }
-    console.log(total);
 
 
 }
