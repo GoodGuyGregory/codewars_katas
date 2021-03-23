@@ -7,7 +7,7 @@ var summation = function (num) {
             sum += num - 1;
             num -= 1;
         }
-        return sum
+        return sum;
     }
     else {
         return num;
