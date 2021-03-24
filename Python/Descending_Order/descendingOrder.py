@@ -7,10 +7,15 @@ def descending_order(num):
         return num
     else:
         sortValues = []
-        while num % 10 != 0:
+        slicing = True
+        while slicing == True:
             value = num % 10
-            num //= 10
-            sortValues.append(value)
+            if num >= 10:
+                num //= 10
+                sortValues.append(value)
+            else:
+                sortValues.append(value)
+                slicing = False
 
         sortValues.sort(reverse=True)
         desNumber = ''
@@ -26,6 +31,8 @@ def main():
     descending_order(42145)
 
     descending_order(145263)
+
+    descending_order(7164920)
 
 
 main()
