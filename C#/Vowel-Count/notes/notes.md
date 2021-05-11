@@ -1,0 +1,2 @@
+[iterate over a string in C#](https://www.codevscolor.com/c-sharp-iterate-string-characters)
+[check index values in C#](https://www.delftstack.com/howto/csharp/check-for-an-element-inside-an-array-in-csharp/)
