@@ -46,20 +46,20 @@ console.log(pofi(3));
 //  i ^ 4 = 1
 console.log(pofi(4));
 
-//  i ^ 5 = 1
+//  i ^ 5 = i
 console.log(pofi(5));
 
-//  i ^ 6 = 1
+//  i ^ 6 = -1
 console.log(pofi(6));
 
-//  i ^ 7 = 1
+//  i ^ 7 = -i
 console.log(pofi(7));
 
 //  i ^ 8 = 1
 console.log(pofi(8));
 
-//  i ^ 9 = 1
+//  i ^ 9 = i
 console.log(pofi(9));
 
-//  i ^ 10 = 1
+//  i ^ 10 = -1
 console.log(pofi(10));
