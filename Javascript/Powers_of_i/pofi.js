@@ -14,7 +14,7 @@ function pofi(n) {
     }
     else {
         i = 1;
-        while (i < n) {
+        while (i <= n) {
             for (let j = 0; j < powersOfi.length; j++) {
                 if (i <= n) {
                     powerOfi = powersOfi[j];
@@ -27,6 +27,11 @@ function pofi(n) {
     }
 }
 
+// Clever Solution: apparently the modulus of  n % 4 can yield the resulting power of i 
+//  if the array is formatted a certain way as follows
+function pofi(n) {
+    return ["1", "i", "-1", "-i"][n % 4];
+}
 
 
 //  TESTS:
