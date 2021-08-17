@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch PathFinder",
+            "request": "launch",
+            "mainClass": "PathFinder",
+            "projectName": "codewars_katas_a8e8a4a2"
+        },
+        {
+            "type": "java",
+            "name": "Launch PathFinder",
+            "request": "launch",
+            "mainClass": "Java.Path_Finder_Can_You_Reach_The_Exit.PathFinder",
+            "projectName": "codewars_katas_a8e8a4a2"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
