@@ -1,4 +1,4 @@
-import java.util.regex.Pattern;
+import java.util.ArrayList;
 
 //  Kata: https://www.codewars.com/kata/5765870e190b1472ec0022a2/train/java
 
@@ -16,11 +16,14 @@ public class PathFinder {
             // return false;
         }
 
+        // get maze size:
+        int mazeSize = maze.indexOf('\n');
         // create a mazeArray based on incoming string
         char[][] mazeProblem = new char[maze.indexOf('\n')][maze.indexOf('\n')];
 
         // fix '\n' issue
         // maze.split(Pattern.matches([\n], maze));
+        // uses a REGEX for the newline char
         String[] splitA = maze.split("\\n");
         String fullMaze = "";
         for (String mazeRows : splitA) {
@@ -48,6 +51,43 @@ public class PathFinder {
         // System.out.print(mazeProblem[i][j]);
         // }
         // }
+
+        // Correct Path:
+        ArrayList<String> movesToSolve = new ArrayList<String>();
+
+        // while still solving:
+        while (mazeProblem[0][0] < mazeProblem.length) {
+
+            // GO DOWN:
+            if (mazeProblem[1][0] != 'W') {
+                for (int i = 1; i < mazeProblem[i].length; i++) {
+                    if (mazeProblem[i][i] == 'W') {
+                        System.out.println("Blocked ");
+                        // stop going down
+                        break;
+                    } else {
+                        System.out.println("Moved to " + "(" + i + ", " + i + ")" + "Safely");
+                        String moveToMake = "(" + i + ", " + i + ")";
+                        movesToSolve.add(moveToMake);
+                    }
+                }
+            }
+
+            // GO RIGHT:
+            else if (mazeProblem[0][1] != 'W') {
+                for (int i = 0; i < mazeProblem[i].length; i++) {
+                    if (mazeProblem[i][1] == 'W') {
+                        System.out.println("Blocked ");
+                        // stop going down
+                        break;
+                    } else {
+                        System.out.println("Moved to " + "(" + i + ", " + i + ")" + "Safely");
+                        String moveToMake = "(" + i + ", " + i + ")";
+                        movesToSolve.add(moveToMake);
+                    }
+                }
+            } // while
+        }
     }
 
     public static void main(String[] args) {
@@ -73,5 +113,4 @@ public class PathFinder {
         // pathFinder(c) -> true
         // pathFinder(d) -> false
     }
-
 }
