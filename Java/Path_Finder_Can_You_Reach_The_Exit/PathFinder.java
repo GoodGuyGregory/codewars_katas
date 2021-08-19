@@ -56,7 +56,7 @@ public class PathFinder {
         ArrayList<String> movesToSolve = new ArrayList<String>();
 
         // while still solving:
-        while (mazeProblem[0][0] < mazeProblem.length) {
+        while (mazeProblem[0][0] <= mazeProblem[mazeSize][mazeSize]) {
 
             // GO DOWN:
             if (mazeProblem[1][0] != 'W') {
@@ -69,6 +69,7 @@ public class PathFinder {
                         System.out.println("Moved to " + "(" + i + ", " + i + ")" + "Safely");
                         String moveToMake = "(" + i + ", " + i + ")";
                         movesToSolve.add(moveToMake);
+
                     }
                 }
             }
@@ -88,7 +89,7 @@ public class PathFinder {
                 }
             } // while
         }
-    }
+    } // PathFinder Class
 
     public static void main(String[] args) {
 
