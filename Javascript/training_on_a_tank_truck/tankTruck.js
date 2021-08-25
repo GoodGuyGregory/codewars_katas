@@ -4,7 +4,7 @@ function tankvol(h, d, vt) {
     let cylinderRadius = d / 2;
     let heightOfCylinder = vt / (Math.PI * (cylinderRadius * cylinderRadius));
     // determine area of segment with liquid
-    let areaVolume = (cylinderRadius * cylinderRadius) * Math.acos((cylinderRadius - heightOfCylinder) / cylinderRadius) - (cylinderRadius - heightOfCylinder) * Math.sqrt(2 * (cylinderRadius * heightOfCylinder) - (heightOfCylinder * heightOfCylinder));
+    let areaVolume = Math.pow(cylinderRadius, 2) * Math.acos((cylinderRadius - h) / cylinderRadius) - (cylinderRadius - h) * Math.sqrt(2 * (cylinderRadius * h) - (Math.pow(h, 2)));
 
     let segmentVolume = heightOfCylinder * areaVolume;
     return Math.floor(segmentVolume);
@@ -17,7 +17,7 @@ function tankvol(h, d, vt) {
 console.log(tankvol(40, 120, 3500));
 
 // should return 1750
-tankvol(60, 120, 3500);
+console.log(tankvol(60, 120, 3500));
 
 // should return 2478 (calculation gives about: 2478.73007973)
-tankvol(80, 120, 3500);
+console.log(tankvol(80, 120, 3500));
