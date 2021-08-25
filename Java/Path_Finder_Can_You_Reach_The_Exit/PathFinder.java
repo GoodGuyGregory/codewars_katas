@@ -45,6 +45,10 @@ public class PathFinder {
             }
         }
 
+        // MAZE BUILD DONE:
+        // =========================
+        // TEST LOGIC FOR PRINTING STRUCTURE:
+
         // print working letters:
         // for (int i = 0; i < mazeProblem.length; i++) {
         // for (int j = 0; j < mazeProblem.length; j++) {
@@ -52,43 +56,11 @@ public class PathFinder {
         // }
         // }
 
-        // Correct Path:
-        ArrayList<String> movesToSolve = new ArrayList<String>();
+        // PATH FINDING LOGIC:
+        // =========================
 
-        // while still solving:
-        while (mazeProblem[0][0] <= mazeProblem[mazeSize][mazeSize]) {
+    } // pathFinder Method
 
-            // GO DOWN:
-            if (mazeProblem[1][0] != 'W') {
-                for (int i = 1; i < mazeProblem[i].length; i++) {
-                    if (mazeProblem[i][i] == 'W') {
-                        System.out.println("Blocked ");
-                        // stop going down
-                        break;
-                    } else {
-                        System.out.println("Moved to " + "(" + i + ", " + i + ")" + "Safely");
-                        String moveToMake = "(" + i + ", " + i + ")";
-                        movesToSolve.add(moveToMake);
-
-                    }
-                }
-            }
-
-            // GO RIGHT:
-            else if (mazeProblem[0][1] != 'W') {
-                for (int i = 0; i < mazeProblem[i].length; i++) {
-                    if (mazeProblem[i][1] == 'W') {
-                        System.out.println("Blocked ");
-                        // stop going down
-                        break;
-                    } else {
-                        System.out.println("Moved to " + "(" + i + ", " + i + ")" + "Safely");
-                        String moveToMake = "(" + i + ", " + i + ")";
-                        movesToSolve.add(moveToMake);
-                    }
-                }
-            } // while
-        }
     } // PathFinder Class
 
     public static void main(String[] args) {
