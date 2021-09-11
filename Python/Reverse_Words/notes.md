@@ -1,0 +1,1 @@
+[Reverse Search a list in Python](https://stackoverflow.com/questions/529424/traverse-a-list-in-reverse-order-in-python)
