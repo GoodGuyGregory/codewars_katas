@@ -1,1 +1,2 @@
-[Reverse Search a list in Python](https://stackoverflow.com/questions/529424/traverse-a-list-in-reverse-order-in-python)
+[Reverse Search a list in Python](https://www.programiz.com/python-programming/methods/built-in/reversed)
+[Join Method in Python](https://stackoverflow.com/questions/493819/why-is-it-string-joinlist-instead-of-list-joinstring)
