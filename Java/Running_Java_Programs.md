@@ -15,3 +15,7 @@
 **java.lang.NoClassDefFoundError:**
 
 this is caused by the plugin from visual studio code. remove all pre appendeed `package: ` lines from your code before running and the commands above should compile succesfully
+
+**Debugging**
+
+[VS CODE Configuration Docs](https://github.com/microsoft/vscode-java-debug/blob/main/Configuration.md)
