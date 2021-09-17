@@ -9,3 +9,11 @@ run and test your code. from inside the directory the dotnet command uses
 `dotnet run `
 
 delete all other dependencies except the `Program.cs` to prevent bloat in the Repo
+
+## Code Formatting with Prettier 
+
+[Edit Code Formatting Settings for VS Code](https://stackoverflow.com/questions/47352611/visual-studio-code-doesnt-format-c-sharp-code)
+
+## Debugging C # Code with Visual Studio Code
+
+[Configurations for C # Debugging ](https://www.pluralsight.com/guides/debugging-.net-core-apps-with-visual-studio-code)
