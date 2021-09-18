@@ -17,3 +17,7 @@ delete all other dependencies except the `Program.cs` to prevent bloat in the Re
 ## Debugging C # Code with Visual Studio Code
 
 [Configurations for C # Debugging ](https://www.pluralsight.com/guides/debugging-.net-core-apps-with-visual-studio-code)
+
+## Bash Configuration 
+
+[Using Jq for Json Parsing](https://cameronnokes.com/blog/working-with-json-in-bash-using-jq/)
