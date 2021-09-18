@@ -16,6 +16,11 @@ delete all other dependencies except the `Program.cs` to prevent bloat in the Re
 
 ## Debugging C # Code with Visual Studio Code
 
+Use the included `debug.sh` to ensure debugging functionality works for your kata solutions
+
+Make shell scripts executable with `chmod +x debug.sh` from your terminal
+to run the file `./debug.sh`
+
 [Configurations for C # Debugging ](https://www.pluralsight.com/guides/debugging-.net-core-apps-with-visual-studio-code)
 
 ## Bash Configuration 
