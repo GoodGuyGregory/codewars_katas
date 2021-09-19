@@ -9,8 +9,8 @@
             "console": "integratedTerminal"
         },
         {
+            "name": "Java: Launch Current File",
             "type": "java",
-            "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
         },

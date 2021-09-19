@@ -32,6 +32,13 @@ case "$ANSWER" in
     echo "Perfect..."
     echo "Now formatting JSON for your current C# project"
     #  Have the user enter the Kata Dir information
+    # Searches the Configurations Array for the C # Debugging 
+    cd ../.vscode
+    # cat launch.json | jq '.configurations[2].program'
+    read -p "Enter Your Kata Name: " KATA
+    # append the Kata name to the program path string
+    DEBUGSTR="\${workspaceFolder}/C#/"$KATA"/bin/Debug/net5.0/"$KATA".dll"
+    echo "$DEBUGSTR"
     ;;
     [nN] | [nN][oO])
     echo "Please build the debugging asset files from the Command-Pallet by typing CMD+SHIFT+P and searching/selecting '.NET: Generate Assets for Build and Debug.'
