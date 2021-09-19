@@ -2,7 +2,7 @@
 
 
 def pyramid(n):
-    #
+    # base case
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
     #  should respond with [[1]]
     pyramid(1)
     # should respond with a list of arrays as [[1],[1,1]]
-    pyramid(2), [[1], [1, 1]]
+    pyramid(2)
     # should respond with three nested arrays [[1], [1, 1], [1, 1, 1]]
     pyramid(3)
 

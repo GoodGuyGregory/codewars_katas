@@ -13,6 +13,8 @@ function lovefunc(flower1, flower2) {
     }
 }
 
+// return flower1 % 2 !== flower2 % 2;
+
 //  Test Cases:
 //  should return true
 console.log(lovefunc(1, 4));
