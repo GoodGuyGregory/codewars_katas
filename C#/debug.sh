@@ -40,10 +40,9 @@ case "$ANSWER" in
     ;;
 esac
 
-    echo "Well.. there is still time.. with your current C# $KATA Solution files open.."
+    echo "Now with your current C# $KATA Solution files open.."
     echo "the next step is echo Build your debugging files..."
     echo "Type: CMD+Shift+P inside of Visual Studio Code"
     echo "The Command-Pallet will be displayed search/select '.NET: Generate Assets for Build and Debug.'"
     echo "Happy Coding! :)"  
-
 
