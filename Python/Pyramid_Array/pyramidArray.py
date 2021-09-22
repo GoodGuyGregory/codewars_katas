@@ -2,7 +2,6 @@
 
 
 def pyramid(n):
-    # base case
     container = list()
     i = 1
     if n == 0:
