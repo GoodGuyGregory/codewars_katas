@@ -3,26 +3,19 @@
 
 def pyramid(n):
     # base case
+    container = list()
+    i = 1
     if n == 0:
-        return []
-    else:
-        # recursive case
-        container = list()
-        i = 1
-        while n > 0:
-            nestedContainer = []
-            if n == 1:
-                nestedContainer.append(i)
-                container.append(nestedContainer)
-                return container
-            else:
-                j = 0
-                while j < n:
-                    nestedContainer.append(i)
-                    j += 1
-                container.append(nestedContainer)
-                pyramid(n-1)
         return container
+    j = 0
+    while j != n:
+        nestedContainer = []
+        nestedContainer.append(i)
+        for k in range(j):
+            nestedContainer.append(i)
+        container.append(nestedContainer)
+        j += 1
+    return container
 
 
 def main():
@@ -36,6 +29,8 @@ def main():
     print(pyramid(2))
     # should respond with three nested arrays [[1], [1, 1], [1, 1, 1]]
     print(pyramid(3))
+    # should respond with three nested arrays [[1], [1, 1], [1, 1, 1], [1, 1, 1, 1]]
+    print(pyramid(4))
 
 
 main()
