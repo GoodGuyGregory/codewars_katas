@@ -1,0 +1,15 @@
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/bin/Debug/net5.0/Sort_and_Star.deps.json
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/bin/Debug/net5.0/Sort_and_Star.runtimeconfig.json
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/bin/Debug/net5.0/Sort_and_Star.runtimeconfig.dev.json
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/bin/Debug/net5.0/Sort_and_Star.dll
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/bin/Debug/net5.0/ref/Sort_and_Star.dll
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/bin/Debug/net5.0/Sort_and_Star.pdb
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/obj/Debug/net5.0/Sort_and_Star.csprojAssemblyReference.cache
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/obj/Debug/net5.0/Sort_and_Star.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/obj/Debug/net5.0/Sort_and_Star.AssemblyInfoInputs.cache
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/obj/Debug/net5.0/Sort_and_Star.AssemblyInfo.cs
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/obj/Debug/net5.0/Sort_and_Star.csproj.CoreCompileInputs.cache
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/obj/Debug/net5.0/Sort_and_Star.dll
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/obj/Debug/net5.0/ref/Sort_and_Star.dll
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/obj/Debug/net5.0/Sort_and_Star.pdb
+/Users/user/Github/open-source-contributions/codewars_katas/C#/Sort_and_Star/obj/Debug/net5.0/Sort_and_Star.genruntimeconfig.cache
