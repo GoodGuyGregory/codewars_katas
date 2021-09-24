@@ -1,34 +1,34 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Python: Current File",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Java: Launch Current File",
-            "type": "java",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "name": ".NET Core Launch (console)",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build",
-            "program": "${workspaceFolder}/C#/Replace_with_Alphabet_Position/bin/Debug/net5.0/Replace_with_Alphabet_Position.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/C#/Replace_with_Alphabet_Position",
-            "console": "internalConsole",
-            "stopAtEntry": false
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Java: Launch Current File",
+      "type": "java",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "name": ".NET Core Launch (console)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/C#/Sort_and_Star/bin/Debug/net5.0/Sort_and_Star.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/C#/Sort_and_Star",
+      "console": "internalConsole",
+      "stopAtEntry": false
+    },
+    {
+      "name": ".NET Core Attach",
+      "type": "coreclr",
+      "request": "attach"
+    }
+  ]
 }
