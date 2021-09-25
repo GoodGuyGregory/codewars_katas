@@ -19,9 +19,9 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/C#/Sort_and_Star/bin/Debug/net5.0/Sort_and_Star.dll",
+      "program": "${workspaceFolder}/C#/test-kata/bin/Debug/net5.0/test-kata.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/C#/Sort_and_Star",
+      "cwd": "${workspaceFolder}/C#/test-kata",
       "console": "internalConsole",
       "stopAtEntry": false
     },
