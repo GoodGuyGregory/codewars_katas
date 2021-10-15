@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace Array_Diff
 {
@@ -8,7 +9,20 @@ namespace Array_Diff
 
           public static int[] ArrayDiff(int[] a, int[] b)
         {
+            ArrayList foundDiffs = new ArrayList();
+            foreach(var element in a)
+            {
+                // check for contents of array b
+                int index = Array.IndexOf(b, element);
+               if(index == -1) 
+               {
+                   // add the element to a list of different 
+                   foundDiffs.Add(element);
+               }
+            }
+           int[] diffs = new int[foundDiffs.Count];
 
+            return diffs;
         }
 
 
@@ -17,10 +31,10 @@ namespace Array_Diff
             // Test Cases:
 
             // Returns [2] 
-            ArrayDiff(new int[] {1, 2},    new int[] {1});
+            Console.WriteLine(ArrayDiff(new int[] {1, 2},    new int[] {1}));
             
             // Returns [2,2] 
-            ArrayDiff(new int[] {1, 2, 2}, new int[] {1});
+            Console.WriteLine(ArrayDiff(new int[] {1, 2, 2}, new int[] {1}));
             
             // Returns [1]   
             ArrayDiff(new int[] {1, 2, 2}, new int[] {2});
@@ -35,6 +49,5 @@ namespace Array_Diff
             ArrayDiff(new int[] {1, 2, 3}, new int[] {1, 2});
         }
             
-        
-    
+    }
 }
