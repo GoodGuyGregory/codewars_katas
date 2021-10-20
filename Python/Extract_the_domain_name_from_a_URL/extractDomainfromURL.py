@@ -3,22 +3,29 @@ import re
 
 def domain_name(url):
     # create webRegex
-    webRegex = re.compile(r'[(http://|https://)?(\w{3}|\w).(\w).(a-z)]')
+    webRegex = re.compile(r'(http\s?)?(w{3})?(\w+)')
 
     # search the provided url
-    for groups in webRegex.findall(url):
-        
+    mo = webRegex.findall(url)
+    if mo[1][2] != 'www':
+        return mo[1][2]
+    # case of www.<url>.<co|com|net|org>
+    else:
+        return mo[2][2]
 
 # Test Cases:
 # =======================================
 # passing tests will return "google"
-domain_name("http://google.com")
+print(domain_name("http://www.google.com"))
 
 # passing tests will return "google"
-domain_name("http://google.co.jp")
+print(domain_name("http://google.com"))
+
+# passing tests will return "google"
+print(domain_name("http://google.co.jp"))
 
 # passing tests will return "xakep"
-domain_name("www.xakep.ru")
+print(domain_name("www.xakep.ru"))
 
 # passing tests will return "youtube"
-domain_name("https://youtube.com")
+print(domain_name("https://youtube.com"))
