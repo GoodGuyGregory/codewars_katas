@@ -1,7 +1,10 @@
 # Kata: https://www.codewars.com/kata/514a024011ea4fb54200004b/train/python
+import re
 
 def domain_name(url):
-    
+    # create webRegex
+    webRegex = re.compile(r'[(http://|https://)?(\w{3}|\w).(\w).(a-z)]')
+
 
 # Test Cases:
 # =======================================
