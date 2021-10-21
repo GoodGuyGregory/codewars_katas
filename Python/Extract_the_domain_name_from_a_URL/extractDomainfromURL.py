@@ -4,10 +4,11 @@ import re
 def domain_name(url):
     # create webRegex
     webRegex = re.compile(r'(http\s?)?(w{3})?(\w+)')
-
     # search the provided url
     mo = webRegex.findall(url)
-    if mo[1][2] != 'www':
+    if len(mo) == 2:
+        return mo[0][2]
+    elif mo[1][2] != 'www':
         return mo[1][2]
     # case of www.<url>.<co|com|net|org>
     else:
