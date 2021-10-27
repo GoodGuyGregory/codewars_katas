@@ -3,7 +3,7 @@ import re
 
 def domain_name(url):
     # create webRegex
-    webRegex = re.compile(r'(http\s?)?(w{3})?(\w+)')
+    webRegex = re.compile(r'(http\s?)?(w{3})?(\w+\-\w+|\w+)')
     # search the provided url
     mo = webRegex.findall(url)
     if len(mo) == 2:
@@ -34,7 +34,8 @@ print(domain_name("https://youtube.com"))
 
 # Edge Case Failures:
 # ======================================
-
+print("Edge Cases:")
+print("====================================")
 # passsing value will return "hypeh-site"
 print(domain_name("https://hyphen-site.org"))
 
@@ -48,4 +49,4 @@ print(domain_name("45sz411yv3y.net/warez/"))
 print(domain_name("msatdpeh5fv.de/error"))
 
 # passing value wil return "37q0lk6p7yn1hce69ffxl4gqocsn"
-print(domain_name(37q0lk6p7yn1hce69ffxl4gqocsn.jp/img/))
+print(domain_name("37q0lk6p7yn1hce69ffxl4gqocsn.jp/img/"))
