@@ -23,9 +23,9 @@
         "request": "launch",
         "preLaunchTask": "build",
         // If you have changed target frameworks, make sure to update the program path.
-        "program": "${workspaceFolder}/C#/Array_Diff/bin/Debug/netcoreapp3.1/Array_Diff.dll",
+        "program": "${workspaceFolder}/C#/Sum_Of_Digits/bin/Debug/netcoreapp3.1/Sum_Of_Digits.dll",
         "args": [],
-        "cwd": "${workspaceFolder}/C#/Array_Diff",
+        "cwd": "${workspaceFolder}/C#/Sum_Of_Digits",
         // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
         "console": "internalConsole",
         "stopAtEntry": false
