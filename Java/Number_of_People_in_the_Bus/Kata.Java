@@ -4,6 +4,13 @@
 public class Kata {
 
     public static int countPassengers(ArrayList<int[]> stops) {
-        
+        System.out.println("Hello Working");
+        return 42;
+    }
+
+    public static void main(String[] args) {
+        Kata testClass = new Kata();
+
+        testClass.countPassengers();
     }
 }
