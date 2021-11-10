@@ -4,9 +4,12 @@ public class PrimeDecomp {
 
 
     public static String factors(int n) {
-        int[] primes = {2,3,5,7,11,13,17};
+        int[] primes = {17,13,11,7,5,3,2};
+
         for (int prime : primes) {
-            System.out.println(prime);
+            if (n % prime == 0) {
+                System.out.println(prime + " is a factor");
+            }
         }
         return "Finished";
     }
