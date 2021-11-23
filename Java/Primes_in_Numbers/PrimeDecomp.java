@@ -22,29 +22,15 @@ public class PrimeDecomp {
     public static String factors(int n) {
         LinkedHashMap<Integer, Integer> primefactorValues = loadMap();
 
-        // holds factors based on divisibility
-        ArrayList<Integer> resultingFactors = new ArrayList<Integer>(0);
-
         while (n != 1) {
             for (int primefactor : primefactorValues.keySet()) {
                 if (n % primefactor == 0) {
+                    int currentFactorCount = primefactorValues.get(primefactor);
                     // reduce size
                     n /= primefactor;
-                    resultingFactors.add(primefactor);
+                    primefactorValues.replace(primefactor, (currentFactorCount + 1));
                 }
             }
-        }
-
-        for (int factorKey : primefactorValues.keySet()) {
-            int totalElementFactorsFound = 0;
-            for (Integer element : resultingFactors) {
-                // found element that needs to be added to Hashmap
-                if (element == factorKey) {
-                    // increase the found count
-                    totalElementFactorsFound += 1;
-                }
-            }
-            primefactorValues.replace(factorKey, totalElementFactorsFound);
         }
 
         // Build Resulting Decomposed string
