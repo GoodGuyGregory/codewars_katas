@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="pileOfCubes">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/Kotlin/Build-a-Pile-of-Cubes/pileOfCubes.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
