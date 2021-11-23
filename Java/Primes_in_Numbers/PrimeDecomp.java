@@ -2,28 +2,31 @@
 // Kata: https://www.codewars.com/kata/54d512e62a5e54c96200019e/train/java
 
 import java.util.*;
-import java.util.TreeMap;
 
 public class PrimeDecomp {
 
-    public static String factors(int n) {
+    public static LinkedHashMap<Integer, Integer> loadMap() {
         int[] primeFactors = { 2, 3, 5, 7, 11, 13, 17 };
-        // TODO:
-        // Create Results Hashmap for each prime values:
-        // due to the fact that there could be multiples
-        HashMap<Integer, Integer> primefactorValues = new HashMap<>();
+
+        LinkedHashMap<Integer, Integer> primeFactorMap = new LinkedHashMap<>();
 
         for (int number : primeFactors) {
             // casts element to string for enqueue
-            primefactorValues.put(number, 0);
+            primeFactorMap.put(number, 0);
         }
 
-        Map<Integer, Integer> sortedFactorMap = new TreeMap<Integer, Integer>(primefactorValues);
+        return primeFactorMap;
+
+    }
+
+    public static String factors(int n) {
+        LinkedHashMap<Integer, Integer> primefactorValues = loadMap();
 
         // holds factors based on divisibility
         ArrayList<Integer> resultingFactors = new ArrayList<Integer>(0);
+
         while (n != 1) {
-            for (int primefactor : primeFactors) {
+            for (int primefactor : primefactorValues.keySet()) {
                 if (n % primefactor == 0) {
                     // reduce size
                     n /= primefactor;
@@ -32,7 +35,7 @@ public class PrimeDecomp {
             }
         }
 
-        for (int factorKey : sortedFactorMap.keySet()) {
+        for (int factorKey : primefactorValues.keySet()) {
             int totalElementFactorsFound = 0;
             for (Integer element : resultingFactors) {
                 // found element that needs to be added to Hashmap
@@ -41,16 +44,16 @@ public class PrimeDecomp {
                     totalElementFactorsFound += 1;
                 }
             }
-            sortedFactorMap.replace(factorKey, totalElementFactorsFound);
+            primefactorValues.replace(factorKey, totalElementFactorsFound);
         }
 
         // Build Resulting Decomposed string
         StringBuilder decompFactors = new StringBuilder();
-        for (int factorKey : sortedFactorMap.keySet()) {
-            if (sortedFactorMap.get(factorKey) == 0) {
+        for (int factorKey : primefactorValues.keySet()) {
+            if (primefactorValues.get(factorKey) == 0) {
                 continue;
-            } else if (sortedFactorMap.get(factorKey) > 1) {
-                String numOfFactors = String.valueOf(sortedFactorMap.get(factorKey));
+            } else if (primefactorValues.get(factorKey) > 1) {
+                String numOfFactors = String.valueOf(primefactorValues.get(factorKey));
                 decompFactors.append("(" + factorKey + "**" + numOfFactors + ")");
             } else {
                 decompFactors.append("(" + String.valueOf(factorKey) + ")");
