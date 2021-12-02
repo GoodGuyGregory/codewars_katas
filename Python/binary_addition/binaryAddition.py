@@ -2,7 +2,8 @@
 
 
 def add_binary(a, b):
-    return a + b
+    # replace removes the formatting from bin method
+    return bin(a+b).replace("0b", "")
 
 
 def main():
