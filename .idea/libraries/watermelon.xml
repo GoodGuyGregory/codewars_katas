@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="watermelon">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/Kotlin/Watermelon/watermelon.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
