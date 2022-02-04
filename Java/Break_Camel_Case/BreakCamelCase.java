@@ -27,8 +27,6 @@ public class BreakCamelCase {
       
       public static void main(String[] args) {
           
-        BreakCamelCase testCases = new BreakCamelCase();
-        
         // TEST CASES:
         // =================================================
         
