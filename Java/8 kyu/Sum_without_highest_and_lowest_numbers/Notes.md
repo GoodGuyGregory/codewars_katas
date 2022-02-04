@@ -47,7 +47,9 @@ class MinMaxExample {
 
 **Creating an Arraylist from int[]**
 
-There is no shortcut for converting from int[] to List<Integer> as Arrays.asList does not deal with boxing and will just create a List<int[]> which is not what you want. You have to make a utility method.
+There is no shortcut for converting from int[] to List<Integer> as Arrays.asList does not deal with boxing and will just create a List<int[]> which is not what you want. You have to make a utility method. 
+
+Using this new arraylist with the `IndexOf()` : which *The indexOf(Object) method of the java.util.ArrayList class returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element. Using this method, you can find the index of a given element.* this will allow the location of the first occurance of the high and lows to be discovered. [IndexOf Examples](https://www.geeksforgeeks.org/java-util-arraylist-indexof-java/)
 
 ```java
 int[] ints = {1, 2, 3};
@@ -56,6 +58,10 @@ for (int i : ints)
 {
     intList.add(i);
 }
+
+
+// REMOVE ELEMENTS FROM A LIST:
+// https://www.geeksforgeeks.org/remove-element-arraylist-java/
 
 // remove the element at the index found, to ensure the remaining values remain inside of the list
 
