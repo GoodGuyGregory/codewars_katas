@@ -16,15 +16,11 @@ public class SumHighLownums {
         }
 
         int sum = 0;
+        
         for (int i : numbers) {
-
-            if (i == highest || i == lowest) {
-                continue;
-            }
-            else {
                 sum += i;
             }
-        }
+        
 
         return sum;
     }
