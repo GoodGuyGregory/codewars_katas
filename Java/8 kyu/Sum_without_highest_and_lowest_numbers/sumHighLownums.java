@@ -66,10 +66,16 @@ public class SumHighLownums {
 
         // null test:
         System.out.println(sum(null));
+        
         // SumPositivesWithDoubleMax
        // [6, 0, 1, 10, 10] => 17 
-
         System.out.println(sum(new int[] { 6, 0, 1, 10, 10}));
+
+        //  Sum Negative Cases:
+        // [-6, -20, -1, -10, -12] =>
+
+        System.out.println(sum(new int[] { -6, -20, -1, -10, -12}));
+
 
     }   
 }
