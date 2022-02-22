@@ -16,7 +16,6 @@ public class SumHighLownums {
             
             for (int i : numbers) {
                 // find highest
-                highest = i;
                 if (i >= numbers[0] && i > highest) {
                     highest = i;
                 }
