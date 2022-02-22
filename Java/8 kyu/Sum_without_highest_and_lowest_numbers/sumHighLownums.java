@@ -16,11 +16,18 @@ public class SumHighLownums {
             
             for (int i : numbers) {
                 // find highest
+                highest = i;
                 if (i >= numbers[0] && i > highest) {
                     highest = i;
                 }
-                // find lowest
                 if (i <= numbers[0]) {
+                    lowest = i;
+                }
+            }
+
+            // confirm lowest value in the list
+            for (int i : numbers) {
+                if (i <= lowest) {
                     lowest = i;
                 }
             }
