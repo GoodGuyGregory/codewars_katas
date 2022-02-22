@@ -16,11 +16,22 @@ public class SumHighLownums {
             
             for (int i : numbers) {
                 // find highest
-                if (i >= numbers[0] && i > highest) {
-                    highest = i;
+                if (i > 0) {
+                    if (i >= numbers[0] && i > highest) {
+                        highest = i;
+                    }
+                    if (i <= numbers[0]) {
+                        lowest = i;
+                    }
                 }
-                if (i <= numbers[0]) {
-                    lowest = i;
+                
+                else if (i < 0 && highest <= 0) {
+                    if (i >= numbers[0]) {
+                        highest = i;
+                    }
+                    if (i <= numbers[0]) {
+                        lowest = i;
+                    }
                 }
             }
 
@@ -78,10 +89,15 @@ public class SumHighLownums {
         System.out.println(sum(new int[] { 6, 0, 1, 10, 10}));
 
         //  Sum Negative Cases:
-        // [-6, -20, -1, -10, -12] =>
+        // [-6, -20, -1, -10, -12] => -28
 
         System.out.println(sum(new int[] { -6, -20, -1, -10, -12}));
 
+        // Sum Mixed Cases:
+        // [-6, 20, -1, 10, -12] => <3>
+        System.out.println(sum(new int[] {-6, 20, -1, 10, -12 }));
+
+    
         // Sum Random Cases:
 //         [104, -453, 540, 313, 458, 470]
 //         [-473, 468, -15, 36, 410, 506]
