@@ -1,7 +1,24 @@
 function towerBuilder(nFloors) {
-    let i = 1;
-    let tower = []
-    for ()
+    let tower = [];
+    let level = 1;
+    while (level <= nFloors) {
+        let floor = "";
+        console.log(`level: ${level}`);
+        if (level == 1) {
+
+            floor += "*";
+            tower.push(floor);
+        }
+        else {
+            floorNum = level;
+            for (let i = 0; i < (floorNum+2) ; i ++) {
+                floor += "*";
+            }
+            tower.push(floor);
+        }
+        level += 1;
+    }
+    console.log(tower);
 }
 
 
@@ -25,4 +42,4 @@ function towerBuilder(nFloors) {
     //   "***********"
     // ]
 
-    console.log(towerBuilder(3));
+    console.log(towerBuilder(6));
