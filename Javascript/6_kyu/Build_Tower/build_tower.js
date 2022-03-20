@@ -1,25 +1,31 @@
+// Kata: 
+
 function towerBuilder(nFloors) {
     let tower = [];
     let level = 1;
+    // keep stacking... 
     while (level <= nFloors) {
-        let floor = "";
-        console.log(`level: ${level}`);
-        if (level == 1) {
+        // number of stars to print.
+        // derived from generic arithmetic sequence forumla
+        let contentsPerLevel = 1 + (level - 1) * 2;
+        if (contentsPerLevel == 0) {
+            contentsPerLevel = 1;
+        }
+        // adds beginning space
+        let levelContents = ' ';
+        for (let i = 0; i < contentsPerLevel; i++) {
 
-            floor += "*";
-            tower.push(floor);
+            levelContents += '*';
         }
-        else {
-            floorNum = level;
-            for (let i = 0; i < (floorNum+2) ; i ++) {
-                floor += "*";
-            }
-            tower.push(floor);
-        }
-        level += 1;
+        // adds trailing space
+        levelContents += ' ';
+        tower.push(levelContents);
+        // going up...
+        level++;
     }
-    console.log(tower);
+    return tower;
 }
+
 
 
 // Test Cases:
@@ -42,4 +48,4 @@ function towerBuilder(nFloors) {
     //   "***********"
     // ]
 
-    console.log(towerBuilder(6));
+ console.log(towerBuilder(6));
