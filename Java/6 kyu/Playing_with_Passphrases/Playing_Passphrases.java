@@ -13,13 +13,14 @@ public class Playing_Passphrases {
     public static String playPass(String s, int n) {
         
         String shiftedLetters = "";
-        // 1. Ci*rcular Shift Letters:
+        // 1. Circular Shift Letters:
         for (char letter : s.toCharArray()) {            
             // System.out.println("letter " + letter + " is " + (int) letter + " in ASCII");
             // determine case
             int asciiVal = (int) letter;
-
-            if (asciiVal == 32 ) {
+            
+            //  track whitespace...
+            if (asciiVal == 32) {
                 // add a space to the string
                 letter = (char) asciiVal;
                 shiftedLetters += letter; 
@@ -44,7 +45,12 @@ public class Playing_Passphrases {
             }
             // Lower Letter Range 95-122
             if (asciiVal >= 95 && asciiVal <= 122) {
-
+            }
+            // 2. replace each digit by its complement to 9.
+            // determin digit characters
+            if ((asciiVal >= 48) && (asciiVal <= 57)) {
+                    int complementOfNine = 9 - letter;
+                    shiftedLetters += (char) complementOfNine; 
             }
         }
         System.out.println(s + " became " + shiftedLetters);
